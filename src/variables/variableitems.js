@@ -31,12 +31,18 @@ exports.TEXT = class TEXT {
         return this.returned;
     }
     set(value) {
+        if (!typeof value == "string") {
+            throw new Error("Value of a TEXT must not be a "+ typeof value)
+        }
         this.value = value;
         return this;
     }
 }
 exports.LOCATION = class LOCATION {
     constructor(x, y, z, rotation) {
+        if (!typeof x == "number" || !typeof y == "number" || !typeof z == "number" || !typeof rot == "number") {
+            throw new Error("Value of an axis must not be a "+ typeof value)
+        }
         this.x = x;
         this.y = y;
         this.z = z;
@@ -81,6 +87,24 @@ exports.LOCATION = class LOCATION {
             throw new Error("Value of an axis must not be a "+ typeof value)
         }
         this.rot = rot;
+        return this;
+    }
+}
+exports.SOUND_EFFECT = class SOUND_EFFECT {
+    constructor(effect) {
+        if (!typeof effect == "string") {
+            throw new Error("Value of a SOUND_EFFECT must not be a "+ typeof value)
+        }
+        this.effect = effect;
+    }
+    get() {
+        return this.effect;
+    }
+    set(effect) {
+        if (!typeof effect == "string") {
+            throw new Error("Value of a SOUND_EFFECT must not be a "+ typeof value)
+        }
+        this.effect = effect;
         return this;
     }
 }
