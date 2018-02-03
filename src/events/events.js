@@ -19,7 +19,7 @@ exports.event = class Event {
     isEvent(event) {
         for (var i = 0; i < this.events.length; i++) {
             if (!event == this.events[i]) {
-                throw new Error("The event specified is not a real event. Please use a different event.")
+                throw new Error("Event not recognised! Please use a different event.")
             }
         }
         return this;
