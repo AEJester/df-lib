@@ -18,6 +18,7 @@ exports.NUMBER = class NUMBER {
         return this;
     }
 }
+
 exports.TEXT = class TEXT {
     constructor(value) {
         if (!typeof value == "string") {
@@ -38,6 +39,7 @@ exports.TEXT = class TEXT {
         return this;
     }
 }
+
 exports.LOCATION = class LOCATION {
     constructor(x, y, z, rotation) {
         if (!typeof x == "number" || !typeof y == "number" || !typeof z == "number" || !typeof rot == "number") {
@@ -90,6 +92,7 @@ exports.LOCATION = class LOCATION {
         return this;
     }
 }
+
 exports.SOUND_EFFECT = class SOUND_EFFECT {
     constructor(effect) {
         if (!typeof effect == "string") {
@@ -105,6 +108,56 @@ exports.SOUND_EFFECT = class SOUND_EFFECT {
             throw new Error("Value of a SOUND_EFFECT must not be a "+ typeof value)
         }
         this.effect = effect;
+        return this;
+    }
+}
+
+exports.POTION_EFFECT = class POTION_EFFECT {
+    constructor(effect, multiplyer, duration) {
+        if (!typeof effect == "string") {
+            throw new Error("Value of a POTION_EFFECT must not be a "+ typeof value)
+        }
+        if (!typeof duration == "number" || !typeof multiplyer == "number") {
+            throw new Error("Duration/Multiplyer of a POTION_EFFECT must not be a "+ typeof value)
+        }
+        this.effect = effect;
+        this.multiplyer = multiplyer;
+        this.duration = duration;
+    }
+    get() {
+        return {effect: this.effect, duration: this.duration, multiplyer: this.multiplyer};
+    }
+    set(effect, multiplyer, duration) {
+        if (!typeof effect == "string") {
+            throw new Error("Value of a POTION_EFFECT must not be a "+ typeof value)
+        }
+        if (!typeof duration == "number" || !typeof multiplyer == "number") {
+            throw new Error("Duration/Multiplyer of a POTION_EFFECT must not be a "+ typeof value)
+        }
+        this.effect = effect;
+        this.multiplyer = multiplyer;
+        this.duration = duration;
+        return this;
+    }
+    setEffect() {
+        if (!typeof effect == "string") {
+            throw new Error("Value of a POTION_EFFECT must not be a "+ typeof value)
+        }
+        this.effect = effect;
+        return this;
+    }
+    setMultiplyer(multiplyer) {
+        if (!typeof multiplyer == "number") {
+            throw new Error("Multiplyer of a POTION_EFFECT must not be a "+ typeof value)
+        }
+        this.multiplyer = multiplyer;
+        return this;
+    }
+    setDuration(duration) {
+        if (!typeof duration == "number") {
+            throw new Error("Duration of a POTION_EFFECT must not be a "+ typeof value)
+        }
+        this.duration = duration;
         return this;
     }
 }
