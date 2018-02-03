@@ -161,3 +161,50 @@ exports.POTION_EFFECT = class POTION_EFFECT {
         return this;
     }
 }
+
+exports.VARIABLE = class VARIABLE {
+    constructor(name, value, saved = false) {
+        this.name = name;
+        this.value = value;
+        this.saved = saved;
+    }
+    get() {
+        return {name: this.name, value: this.value, saved: this.saved}
+    }
+    set(name, value, saved = false) {
+        if (typeof name !== "string" || typeof value !== "string" || typeof saved !== "boolean") {
+            throw new Error("Invalid parameter in VARIABLE");
+        }
+        this.name = name;
+        this.value = value;
+        this.saved = saved;
+        return this;
+    }
+    setValue(value) {
+        if (typeof value !== "string") {
+            throw new Error("Invalid parameter in VARIABLE");
+        }
+        this.value = value;
+        return this;
+    }
+    setSaved(saved) {
+        if (typeof saved !== "boolean") {
+            throw new Error("Invalid parameter in VARIABLE");
+        }
+        this.saved = saved;
+        return this;
+    }
+}
+
+exports.SPAWN_EGG = class SPAWN_EGG {
+    constructor(name) {
+        this.name = name;
+    }
+    get() {
+        return this.name;
+    }
+    set(name) {
+        this.name = name;
+        return this;
+    } 
+}

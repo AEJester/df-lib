@@ -19,22 +19,4 @@ exports.plot = class Plot {
     createFunction(name) {
         return this;
     }
-    setVariable(variable, value, saved = false) {
-        this.variables.push({
-            variable: variable,
-            value: value,
-            saved: saved
-        });
-        return this;
-    }
-    readVariable(variable) {
-        for (var x = 0; x < this.variables.length; x++) {
-            if (!typeof this.variables[x].variable == "string") {
-                throw new Error("unreadable variable at position "+x+". Variable names must be a string.");
-            } else {
-                var returned = this.variables[x];
-            }
-        }
-        return returned;
-    }
 }
