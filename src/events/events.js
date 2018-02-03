@@ -1,19 +1,35 @@
 exports.event = class Event {
     constructor() {
         this.events = [
-            "PlayerLeftClick",
+            "PlayerJoin",
+            "PlayerLeave",
             "PlayerRightClick",
+            "PlayerLeftClick",
+            "PlayerRespawn",
+            "PlayerDeath",
             "PlayerSneak",
             "PlayerUnsneak",
-            "PlayerPickupItem",
-            "PlayerDropItem",
-            "PlayerDamagePlayer",
-            "PlayerKillPlayer",
+            "PlayerDamagePlayer"     
+            "PlayerProjDamagePlayer", 
             "PlayerTakeDamage",
+            "PlayerKillPlayer",
+            "PlayerKillMob",
+            "MobKillPlayer",
             "PlayerDamageMob",
             "MobDamagePlayer",
+            "ProjectileHit",
+            "PlayerCommand",
+            "PlayerClickItem",
+            "PlayerClickEntity",
             "PlayerPlaceBlock",
             "PlayerBreakBlock"
+            "PlayerPickupItem",
+            "PlayerDropItem",
+            "PlayerConsume",
+            "PlayerSwapHands",
+            "PlayerChangeSlot",
+            "PlayerStartSprint",
+            "PlayerStopSprint",
         ];
     }
     isEvent(event) {
