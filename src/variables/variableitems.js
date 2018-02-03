@@ -208,3 +208,16 @@ exports.SPAWN_EGG = class SPAWN_EGG {
         return this;
     } 
 }
+
+exports.VALUE = class VALUE {
+    constructor(name) {
+        this.name = name;
+    }
+    get() {
+        return this.name;
+    }
+    set(name) {
+        this.name = name;
+        return this;
+    } 
+}
