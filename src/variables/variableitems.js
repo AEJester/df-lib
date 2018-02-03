@@ -154,7 +154,7 @@ exports.POTION_EFFECT = class POTION_EFFECT {
         return this;
     }
     setDuration(duration) {
-        if (typeof duration == "number") {
+        if (typeof duration !== "number") {
             throw new Error("Duration of a POTION_EFFECT must not be a "+ typeof value)
         }
         this.duration = duration;
