@@ -11,8 +11,7 @@ exports.plot = class Plot {
         if (!typeof callback == "function") {
             throw new Error("The callback for an event must be a function");
         }
-        events.isEvent(event);
-        return this;
+        return events.isEvent(event);;
     }
     createLoop(ticks) {
         return this;
@@ -27,5 +26,15 @@ exports.plot = class Plot {
             saved: saved
         });
         return this;
+    }
+    readVariable(variable) {
+        for (var x = 0; x < this.variables.length; x++) {
+            if (!typeof this.variables[x].variable == "string") {
+                throw new Error("unreadable variable at position "+x+". Variable names must be a string.");
+            } else {
+                var returned = this.variables[x];
+            }
+        }
+        return returned;
     }
 }
