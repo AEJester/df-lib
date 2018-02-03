@@ -9,7 +9,7 @@ exports.event = class Event {
             "PlayerDeath",
             "PlayerSneak",
             "PlayerUnsneak",
-            "PlayerDamagePlayer"     
+            "PlayerDamagePlayer",     
             "PlayerProjDamagePlayer", 
             "PlayerTakeDamage",
             "PlayerKillPlayer",
@@ -22,7 +22,7 @@ exports.event = class Event {
             "PlayerClickItem",
             "PlayerClickEntity",
             "PlayerPlaceBlock",
-            "PlayerBreakBlock"
+            "PlayerBreakBlock",
             "PlayerPickupItem",
             "PlayerDropItem",
             "PlayerConsume",
