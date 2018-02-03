@@ -30,6 +30,8 @@ exports.event = class Event {
             "PlayerChangeSlot",
             "PlayerStartSprint",
             "PlayerStopSprint",
+            "PlayerWalk",
+            "PlayerTakeFallDamage"
         ];
     }
     isEvent(event) {
