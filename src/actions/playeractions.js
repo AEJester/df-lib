@@ -135,27 +135,27 @@ module.exports = class PlayerAction {
         console.log("Cleared!");
         return this;
     }
-    showInventory(row1, row2, row3) {
-        if (typeof row1 == "object") {
-            for (var c = 0; c < row1.length; c++) {
-                console.log(row1[c]);
+    showInventory(top, middle, bottom) {
+        if (typeof top == "object") {
+            for (var c = 0; c < top.length; c++) {
+                console.log(top[c]);
             }
-        } else if (typeof row1 == "string") {
-            console.log(row1);
+        } else if (typeof top == "string") {
+            console.log(top);
         }
-        if (typeof row2 == "object") {
-            for (var c = 0; c < row2.length; c++) {
-                console.log(row2[c]);
+        if (typeof middle == "object") {
+            for (var c = 0; c < middle.length; c++) {
+                console.log(middle[c]);
             }
-        } else if (typeof row2 == "string") {
-            console.log(row2);
+        } else if (typeof middle == "string") {
+            console.log(middle);
         }
-        if (typeof row3 == "object") {
-            for (var c = 0; c < row3.length; c++) {
-                console.log(row3[c]);
+        if (typeof bottom == "object") {
+            for (var c = 0; c < bottom.length; c++) {
+                console.log(bottom[c]);
             }
-        } else if (typeof row3 == "string") {
-            console.log(row3);
+        } else if (typeof bottom == "string") {
+            console.log(bottom);
         }
         return this;
     }
@@ -163,27 +163,27 @@ module.exports = class PlayerAction {
         console.log("Closed Inventory.");
         return this;
     }
-    expandInventory(row1, row2, row3) {
-        if (typeof row1 == "object") {
-            for (var c = 0; c < row1.length; c++) {
-                console.log(row1[c]);
+    expandInventory(top, middle, bottom) {
+        if (typeof top == "object") {
+            for (var c = 0; c < top.length; c++) {
+                console.log(top[c]);
             }
-        } else if (typeof row1 == "string") {
-            console.log(row1);
+        } else if (typeof top == "string") {
+            console.log(top);
         }
-        if (typeof row2 == "object") {
-            for (var c = 0; c < row2.length; c++) {
-                console.log(row2[c]);
+        if (typeof middle == "object") {
+            for (var c = 0; c < middle.length; c++) {
+                console.log(middle[c]);
             }
-        } else if (typeof row2 == "string") {
-            console.log(row2);
+        } else if (typeof middle == "string") {
+            console.log(middle);
         }
-        if (typeof row3 == "object") {
-            for (var c = 0; c < row3.length; c++) {
-                console.log(row3[c]);
+        if (typeof bottom == "object") {
+            for (var c = 0; c < bottom.length; c++) {
+                console.log(bottom[c]);
             }
-        } else if (typeof row3 == "string") {
-            console.log(row3);
+        } else if (typeof bottom == "string") {
+            console.log(bottom);
         }
         return this;
     }
