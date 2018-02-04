@@ -1,4 +1,4 @@
-exports.Loop = class Loop {
+module.exports = class Loop {
     constructor(ticks = 20, func) {
         if (typeof func !== "function") {
             throw new Error("A function is not present.")

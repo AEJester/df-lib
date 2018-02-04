@@ -1,5 +1,5 @@
 const events = require("./events/events.js");
-exports.plot = class Plot {
+module.exports = class Plot {
     constructor(name, icon) {
         this.variables = [];
         this.savedVars = [];

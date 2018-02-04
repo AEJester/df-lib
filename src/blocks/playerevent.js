@@ -1,4 +1,4 @@
-exports.PlayerEvent = class PlayerEvent {
+module.exports = class PlayerEvent {
     constructor() {
         this.events = [
             "PlayerJoin",

@@ -2,7 +2,7 @@
 /**
  * Represents a player action.
  */
-exports.PlayerAction = class PlayerAction {
+module.exports = class PlayerAction {
     constructor() {
         this.sleep = function(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));

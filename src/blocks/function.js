@@ -1,4 +1,4 @@
-exports.Fn = class Fn {
+module.exports = class Fn {
     constructor(name, func) {
         if (typeof func !== "function") {
             throw new Error("A function is not present.")
