@@ -12,7 +12,7 @@ saveInventory => None
 loadInventory => None
 setSlot => Number 1-9
 giveRandomItems => item(s)
-
+*/
 sendMessage => text
 sendDialogue => text 1-27, number
 sendHover => text, text
@@ -82,7 +82,7 @@ kickPlayer => None
 rewardCredit => None
 
 this is for player events only;
-*/
+
 module.exports = class PlayerAction {
     constructor() {
         
