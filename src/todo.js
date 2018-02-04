@@ -13,6 +13,7 @@ loadInventory => None
 setSlot => Number 1-9
 giveRandomItems => item(s)
 */
+/*
 sendMessage => text
 sendDialogue => text 1-27, number
 sendHover => text, text
@@ -27,7 +28,6 @@ AddBossBar => text, number 1-100, wool
 ClearBossBar => None
 SendActionBar => text
 setChatColor => text
-
 teleport => location
 randomTeleport => location(s)
 launchUpward => number
@@ -46,7 +46,7 @@ setSaturation => number 1-20
 setMaxHealth => number
 setAttackSpeed => number
 setOnFire => number
-
+*/
 launchProjectile => Projectile, [text], number, location, particle effect
 removeArrowsInBody => None
 

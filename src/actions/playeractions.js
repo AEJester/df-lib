@@ -276,6 +276,202 @@ module.exports = class PlayerAction {
      * @param {*} wool 
      */
     addBossBar(text, health, wool) {
-
+        console.log("Bossbar created: "+ {text: text, health: health, color: wool});
+        return this;
+    }
+    /** 
+     * Prints a message.
+    */
+    clearBossBar() {
+        console.log("Boss bar cleared.");
+        return this;
+    }
+    /**
+     * Prints a message.
+     * @param {*} text 
+     */
+    sendActionBar(text) {
+        console.log(text);
+        return this;
+    }
+    /**
+     * Prints a message.
+     * @param {*} color 
+     */
+    setChatColor(color) {
+        console.log("Color: "+color);
+        return this;
+    }
+    /**
+     * Prints a location object.
+     * @param {LOCATION} location 
+     */
+    teleport(location) {
+        console.log("Player teleported: "+location);
+        return this;
+    }
+    /**
+     * Teleports to a random location.
+     * @param {LOCATION} locations 
+     */
+    randomTeleport(locations) {
+        if (typeof locations == "object") {
+            console.log("Player teleported: "+locations[Math.floor(Math.random() * locations.length)]);
+        } else {
+            console.log("Player teleported: "+locations);
+        }
+        return this;
+    }
+    /**
+     * Launches a player up.
+     * @param {*} number 
+     */
+    launchUpward(number) {
+        console.log("Player launched.");
+        return this;
+    }
+    /**
+     * Launches a player forward.
+     * @param {*} number 
+     */
+    launchForward(number) {
+        console.log("Player launched.");
+        return this;
+    }
+    /**
+     * Launches a player toward a location.
+     * @param {*} location 
+     * @param {*} number 
+     */
+    launchToward(location, number) {
+        console.log("Player launched.");
+        return this;
+    }
+    /**
+     * Riding an entity.
+     * @param {*} name 
+     */
+    rideEntity(name) {
+        console.log("Found entity. Player riding "+name);
+        return this;
+    }
+    /**
+     * Damages a player.
+     * @param {*} number 
+     */
+    damage(number) {
+        console.log("Player damaged.");
+        return this;
+    }
+    /**
+     * Heals a player.
+     * @param {*} number 
+     */
+    heal(number) {
+        console.log("Player healed.");
+        return this;
+    }
+    /**
+     * Potion to apply.
+     * @param {POTION} potion 
+     */
+    givePotionEffect(potion) {
+        if (typeof potion == "object") {
+            for (var z = 0; z < potion.length; z++) {
+                console.log("Potion "+potion[z]+" applied.");
+            }
+        } else {
+            console.log("Potion "+potion+" applied.");
+        }
+        return this;
+    }
+    /**
+     * Potion to remove.
+     * @param {POTION} potion 
+     */
+    removePotionEffect(potion) {
+        if (typeof potion == "object") {
+            for (var z = 0; z < potion.length; z++) {
+                console.log("Potion "+potion[z]+" removed.");
+            }
+        } else {
+            console.log("Potion "+potion+" removed.");
+        }
+        return this;
+    }
+    /**
+     * Set xp level of the player.
+     * @param {*} number 
+     */
+    setXpLevel(number) {
+        console.log("XP level set.");
+        return this;
+    }
+    /**
+     * Sets the xp progress of the player.
+     * @param {*} number 
+     */
+    setXpProgress(number) {
+        console.log("Progress set to "+number);
+        return this;
+    }
+    /**
+     * Sets the player's food level.
+     * @param {*} number 
+     */
+    setFoodLevel(number) {
+        console.log("Food level set to"+ number);
+        return this;
+    }
+    /**
+     * Set the player's saturation level.
+     * @param {*} number 
+     */
+    setSaturation(number) {
+        console.log("Saturation set.");
+        return this;
+    }
+    /**
+     * Set the player's saturation level.
+     * @param {*} number 
+     */
+    setMaxHealth(number) {
+        console.log("Maximum health set.");
+        return this;
+    }
+    /**
+     * Set the player's saturation level.
+     * @param {*} number 
+     */
+    setAttackSpeed(number) {
+        console.log("Attack speed set.");
+        return this;
+    }
+    /**
+     * Set the player's saturation level.
+     * @param {*} number 
+     */
+    setOnFire(number) {
+        console.log("Player set on fire.");
+        return this;
+    }
+    /**
+     * Launches a projectile.
+     * @param {*} projectile 
+     * @param {*} text 
+     * @param {*} number 
+     * @param {*} location 
+     * @param {*} particle_effect 
+     */
+    launchProjectile(projectile, text = "", number, location, particle_effect = "") {
+        console.log("Projectile "+projectile+" launched.");
+        return this;
+    }
+    /** 
+     * Removes the arrows from a players body
+    */
+    removeArrowsinBody() {
+        console.log("Arrows removed from body.")
+        return this;
     }
 }
