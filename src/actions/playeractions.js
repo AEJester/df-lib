@@ -1,4 +1,4 @@
-
+/*
 giveItems => item(s)
 setItems => item(s)
 setArmor => item(s)
@@ -82,7 +82,7 @@ kickPlayer => None
 rewardCredit => None
 
 this is for player events only;
-
+*/
 module.exports = class PlayerAction {
     constructor() {
         
