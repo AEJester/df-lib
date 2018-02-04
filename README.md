@@ -1,2 +1,2 @@
 # df-lib
-A JS library for diamondfire
+A JS library for the server diamondfire.
