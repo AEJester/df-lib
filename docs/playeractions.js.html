@@ -1,4 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: playeractions.js</title>
 
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: playeractions.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
 /**
  * Represents a player action.
  */
@@ -14,7 +42,7 @@ module.exports = class PlayerAction {
      */
     giveItems(items) {
         if (typeof items == "object") {
-            for (var c = 0; c < items.length; c++) {
+            for (var c = 0; c &lt; items.length; c++) {
                 console.log(items[c])
             }
         } else if (typeof items == "string") {
@@ -28,7 +56,7 @@ module.exports = class PlayerAction {
      */
     setItems(items) {
         if (typeof items == "object") {
-            for (var c = 0; c < items.length; c++) {
+            for (var c = 0; c &lt; items.length; c++) {
                 console.log(items[c])
             }
         } else if (typeof items == "string") {
@@ -42,7 +70,7 @@ module.exports = class PlayerAction {
      */
     setArmor(armor) {
         if (typeof armor == "object") {
-            for (var c = 0; c < armor.length; c++) {
+            for (var c = 0; c &lt; armor.length; c++) {
                 console.log(armor[c])
             }
         } else if (typeof armor == "string") {
@@ -64,7 +92,7 @@ module.exports = class PlayerAction {
      */
     removeItems(items) {
         if (typeof items == "object") {
-            for (var c = 0; c < items.length; c++) {
+            for (var c = 0; c &lt; items.length; c++) {
                 console.log(items[c])
             }
         } else if (typeof items == "string") {
@@ -87,21 +115,21 @@ module.exports = class PlayerAction {
      */
     showInventory(top, middle, bottom) {
         if (typeof top == "object") {
-            for (var c = 0; c < top.length; c++) {
+            for (var c = 0; c &lt; top.length; c++) {
                 console.log(top[c]);
             }
         } else if (typeof top == "string") {
             console.log(top);
         }
         if (typeof middle == "object") {
-            for (var c = 0; c < middle.length; c++) {
+            for (var c = 0; c &lt; middle.length; c++) {
                 console.log(middle[c]);
             }
         } else if (typeof middle == "string") {
             console.log(middle);
         }
         if (typeof bottom == "object") {
-            for (var c = 0; c < bottom.length; c++) {
+            for (var c = 0; c &lt; bottom.length; c++) {
                 console.log(bottom[c]);
             }
         } else if (typeof bottom == "string") {
@@ -124,21 +152,21 @@ module.exports = class PlayerAction {
      */
     expandInventory(top, middle, bottom) {
         if (typeof top == "object") {
-            for (var c = 0; c < top.length; c++) {
+            for (var c = 0; c &lt; top.length; c++) {
                 console.log(top[c]);
             }
         } else if (typeof top == "string") {
             console.log(top);
         }
         if (typeof middle == "object") {
-            for (var c = 0; c < middle.length; c++) {
+            for (var c = 0; c &lt; middle.length; c++) {
                 console.log(middle[c]);
             }
         } else if (typeof middle == "string") {
             console.log(middle);
         }
         if (typeof bottom == "object") {
-            for (var c = 0; c < bottom.length; c++) {
+            for (var c = 0; c &lt; bottom.length; c++) {
                 console.log(bottom[c]);
             }
         } else if (typeof bottom == "string") {
@@ -174,7 +202,7 @@ module.exports = class PlayerAction {
      */
     giveRandomItems(items) {
         if (typeof items == "object") {
-            for (var c = 0; c < items.length; c++) {
+            for (var c = 0; c &lt; items.length; c++) {
                 console.log(items[c])
             }
         } else if (typeof items == "string") {
@@ -198,7 +226,7 @@ module.exports = class PlayerAction {
      */
     async sendDialogue(text, delay) {
         if (typeof text == "object") {
-            for (var i = 0; i < text.length; i++) {
+            for (var i = 0; i &lt; text.length; i++) {
                 console.log(text[i]);
                 await this.sleep(number);
             }
@@ -231,7 +259,7 @@ module.exports = class PlayerAction {
      * @param {LOCATION} opts.location 
      */
     playSoundEffect(sound, opts={}) {
-        if (!opts.location && !opts.number) {
+        if (!opts.location &amp;&amp; !opts.number) {
             
         }
         return this;
@@ -243,7 +271,7 @@ module.exports = class PlayerAction {
      */
     async playSequence(sound_effects, delay) {
         if (typeof sound_effects == "object") {
-            for (var t = 0; t < sound_effects.length; t++) {
+            for (var t = 0; t &lt; sound_effects.length; t++) {
                 console.log("Sound "+ sound_effects[t]+" played.");
                 await this.sleep(delay);
             }
@@ -278,4 +306,26 @@ module.exports = class PlayerAction {
     addBossBar(text, health, wool) {
 
     }
-}
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module.exports.html">exports</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Feb 04 2018 12:33:07 GMT-0500 (Eastern Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
