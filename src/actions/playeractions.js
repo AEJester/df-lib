@@ -10,7 +10,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints out items to the console.
-     * @param {*} items Array of items to print.
+     * @param {*} items 
      */
     giveItems(items) {
         if (typeof items == "object") {
@@ -24,7 +24,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints out items to the console
-     * @param {*} items Array of items to print.
+     * @param {*} items 
      */
     setItems(items) {
         if (typeof items == "object") {
@@ -38,7 +38,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints the armor out to the console.
-     * @param {*} armor Array of items to print.
+     * @param {*} armor 
      */
     setArmor(armor) {
         if (typeof armor == "object") {
@@ -52,7 +52,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints out an item to the console.
-     * @param {*} item Item to print.
+     * @param {*} item 
      */
     setOffHand(item) {
         console.log(item);
@@ -60,7 +60,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints out items to the console.
-     * @param {*} items Array of items to print.
+     * @param {*} items 
      */
     removeItems(items) {
         if (typeof items == "object") {
@@ -81,9 +81,9 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints each item in an array to the console.
-     * @param {*} top Array of items to print.
-     * @param {*} middle Array of items to print.
-     * @param {*} bottom Array of items to print.
+     * @param {*} top 
+     * @param {*} middle 
+     * @param {*} bottom 
      */
     showInventory(top, middle, bottom) {
         if (typeof top == "object") {
@@ -118,9 +118,9 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Acts like ShowInventory.
-     * @param {*} top Array of items to print.
-     * @param {*} middle Array of items to print.
-     * @param {*} bottom Array of items to print.
+     * @param {*} top 
+     * @param {*} middle 
+     * @param {*} bottom 
      */
     expandInventory(top, middle, bottom) {
         if (typeof top == "object") {
@@ -162,7 +162,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints what slot was set.
-     * @param {*} number Prints a number.
+     * @param {*} number 
      */
     setSlot(number) {
         console.log(`Slot ${number} set.`)
@@ -170,7 +170,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints more items to the console.
-     * @param {*} items Array of items to print.
+     * @param {*} items 
      */
     giveRandomItems(items) {
         if (typeof items == "object") {
@@ -184,7 +184,7 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints a string to the console.
-     * @param {*} text String to print.
+     * @param {*} text 
      */
     sendMessage(text) {
         var text = text.toString();
@@ -193,8 +193,8 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Sends an array of text at a delay
-     * @param {*} text String to print.
-     * @param {Number} delay Delay in MS.
+     * @param {*} text 
+     * @param {Number} delay 
      */
     async sendDialogue(text, delay) {
         if (typeof text == "object") {
@@ -209,8 +209,8 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints a message with a hover.
-     * @param {*} text String to send.
-     * @param {*} text1 String to hover with.
+     * @param {*} text 
+     * @param {*} text1 
      */
     sendHover(text, text1) {
         console.log(text+" (Hover) "+ text1);
@@ -226,9 +226,9 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Plays a sound effect with an optional pitch
-     * @param {String} sound The sound variable object
-     * @param {Number} opts.pitch Pitch of the sound to play
-     * @param {LOCATION} opts.location Location of the sound
+     * @param {String} sound 
+     * @param {Number} opts.pitch
+     * @param {LOCATION} opts.location 
      */
     playSoundEffect(sound, opts={}) {
         if (!opts.location && !opts.number) {
@@ -238,8 +238,8 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Plays a sound like sendDialogue would.
-     * @param {*} sound_effects Sound effect(s).
-     * @param {*} delay Delay in MS.
+     * @param {*} sound_effects 
+     * @param {*} delay 
      */
     async playSequence(sound_effects, delay) {
         if (typeof sound_effects == "object") {
@@ -254,9 +254,9 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      * Prints a title to the console.
-     * @param {*} title String of title.
-     * @param {*} duration Duration in milis
-     * @param {*} opts.subtitle Optional subtitle. 
+     * @param {*} title 
+     * @param {*} duration 
+     * @param {*} opts 
      */
     sendTitle(title, duration, opts={}) {
         console.log(title)
@@ -264,16 +264,16 @@ exports.PlayerAction = class PlayerAction {
     }
     /**
      *Prints a chat tag to the console.
-     * @param {*} text String of chat tag.
+     * @param {*} text 
      */
     setChatTag(text) {
         console.log("Chat tage set!");
     }
     /**
      * Prints a boss bar object to the console.
-     * @param {*} text String of text.
-     * @param {*} health Number to tell how filled.
-     * @param {*} wool (String) Color.
+     * @param {*} text 
+     * @param {*} health 
+     * @param {*} wool 
      */
     addBossBar(text, health, wool) {
 
