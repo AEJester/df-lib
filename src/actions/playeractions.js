@@ -1,4 +1,3 @@
-/*
 
 giveItems => item(s)
 setItems => item(s)
@@ -82,5 +81,132 @@ autoRespawn => None
 kickPlayer => None
 rewardCredit => None
 
-this is for player events only
-*/
+this is for player events only;
+
+module.exports = class PlayerAction {
+    constructor() {
+        
+    }
+    giveItems(items) {
+        if (typeof items == "object") {
+            for (var c = 0; c < items.length; c++) {
+                console.log(items[c])
+            }
+        } else if (typeof items == "string") {
+            console.log(items);
+        }
+        return this;
+    }
+    setItems(items) {
+        if (typeof items == "object") {
+            for (var c = 0; c < items.length; c++) {
+                console.log(items[c])
+            }
+        } else if (typeof items == "string") {
+            console.log(items);
+        }
+        return this
+    }
+    setArmor(armor) {
+        if (typeof armor == "object") {
+            for (var c = 0; c < armor.length; c++) {
+                console.log(armor[c])
+            }
+        } else if (typeof armor == "string") {
+            console.log(armor);
+        }
+        return this;
+    }
+    setOffHand(item) {
+        console.log(item);
+        return this;
+    }
+    removeItems(items) {
+        if (typeof items == "object") {
+            for (var c = 0; c < items.length; c++) {
+                console.log(items[c])
+            }
+        } else if (typeof items == "string") {
+            console.log(items);
+        }
+        return this;
+    }
+    clearInventory() {
+        console.log("Cleared!");
+        return this;
+    }
+    showInventory(row1, row2, row3) {
+        if (typeof row1 == "object") {
+            for (var c = 0; c < row1.length; c++) {
+                console.log(row1[c]);
+            }
+        } else if (typeof row1 == "string") {
+            console.log(row1);
+        }
+        if (typeof row2 == "object") {
+            for (var c = 0; c < row2.length; c++) {
+                console.log(row2[c]);
+            }
+        } else if (typeof row2 == "string") {
+            console.log(row2);
+        }
+        if (typeof row3 == "object") {
+            for (var c = 0; c < row3.length; c++) {
+                console.log(row3[c]);
+            }
+        } else if (typeof row3 == "string") {
+            console.log(row3);
+        }
+        return this;
+    }
+    closeInventory() {
+        console.log("Closed Inventory.");
+        return this;
+    }
+    expandInventory(row1, row2, row3) {
+        if (typeof row1 == "object") {
+            for (var c = 0; c < row1.length; c++) {
+                console.log(row1[c]);
+            }
+        } else if (typeof row1 == "string") {
+            console.log(row1);
+        }
+        if (typeof row2 == "object") {
+            for (var c = 0; c < row2.length; c++) {
+                console.log(row2[c]);
+            }
+        } else if (typeof row2 == "string") {
+            console.log(row2);
+        }
+        if (typeof row3 == "object") {
+            for (var c = 0; c < row3.length; c++) {
+                console.log(row3[c]);
+            }
+        } else if (typeof row3 == "string") {
+            console.log(row3);
+        }
+        return this;
+    }
+    saveInventory() {
+        console.log("Invenntory saved.");
+        return this;
+    }
+    loadInventory() {
+        console.log("Inventory loaded.");
+        return this;
+    }
+    setSlot(number) {
+        console.log(`Slot ${number} set.`)
+        return this;
+    }
+    giveRandomItems(items) {
+        if (typeof items == "object") {
+            for (var c = 0; c < items.length; c++) {
+                console.log(items[c])
+            }
+        } else if (typeof items == "string") {
+            console.log(items);
+        }
+        return this;
+    }
+}
