@@ -1,0 +1,26 @@
+{
+  "name": "df-lib",
+  "version": "0.0.0",
+  "description": "A JS library for diamondfire.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AEJester/df-lib.git"
+  },
+  "keywords": [
+    "minecraft",
+    "diamondfire"
+  ],
+  "author": "AEJester",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AEJester/df-lib/issues"
+  },
+  "homepage": "https://github.com/AEJester/df-lib#readme"
+}

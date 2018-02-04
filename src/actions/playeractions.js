@@ -131,7 +131,7 @@ module.exports = class PlayerAction {
         console.log(text);
         return this;
     }
-    async sendDialogue(text, number) {
+    async sendDialogue(text, delay) {
         if (typeof text == "object") {
             for (var i = 0; i < text.length; i++) {
                 console.log(text[i]);
@@ -156,5 +156,20 @@ module.exports = class PlayerAction {
             
         }
         return this;
+    }
+    async playSequence(sound_effects, delay, opts={}) {
+        if (typeof sound_effects == "object") {
+            for (var t = 0; t < sound_effects.length; t++) {
+                console.log("Sound "+ sound_effects[t]+" played.");
+                await this.sleep(delay);
+            }
+        } else {
+            console.log("Sound "+ sound_effects +" played.");
+        }
+        return this;
+    }
+    sendTitle(title, duration, opts={}) {
+        console.log(title)
+        (opts.subtitle) ? console.log(opts.subtitle) : console.log("Title sent");
     }
 }
