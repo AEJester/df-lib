@@ -474,4 +474,36 @@ module.exports = class PlayerAction {
         console.log("Arrows removed from body.")
         return this;
     }
+    disguiseAsMob(spawn_egg, text="") {
+        console.log("Disguised as "+spawn_egg);
+        return this;
+    }
+    disguiseAsPlayer(text) {
+        console.log("Disguised as "+ player);
+        return this;
+    }
+    disguiseAsBlock(block, text = "", number = 0) {
+        console.log("Disguised as "+ block);
+        return this;
+    }
+    unDisguise() {
+        console.log("Disguises removed.");
+        return this;
+    }
+    hideOwnDisguise() {
+        console.log("Disguise hidden.");
+        return this;
+    }
+    enablePvp() {
+        console.log("PvP enabled.");
+        return this;
+    }
+    disablePvp() {
+        console.log("PvP disabled.");
+        return this;
+    }
+    setTime(number) {
+        console.log("Time set.");
+        return this;
+    }
 }
