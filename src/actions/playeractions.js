@@ -574,4 +574,20 @@ module.exports = class PlayerAction {
         console.log("Gamemode set to survival.");
         return this;
     }
+    rollBackChanges() {
+        console.log("Changes rolled back.");
+        return this;
+    }
+    autoRespawn() {
+        console.log("Auto respawn triggered.");
+        return this;
+    }
+    kickPlayer() {
+        console.log("Player kicked."); 
+        return this;
+    }
+    rewardCredit() {
+        console.log("Credits rewarded.");
+        return this
+    }
 }
