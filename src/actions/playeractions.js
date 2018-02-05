@@ -588,6 +588,6 @@ module.exports = class PlayerAction {
     }
     rewardCredit() {
         console.log("Credits rewarded.");
-        return this
+        return this;
     }
 }

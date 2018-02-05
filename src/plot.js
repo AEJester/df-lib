@@ -1,4 +1,4 @@
-const events = require("./events/events.js");
+
 module.exports = class Plot {
     constructor(name, icon) {
         this.variables = [];

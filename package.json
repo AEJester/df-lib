@@ -1,6 +1,6 @@
 {
   "name": "df-lib",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A JS library for diamondfire.",
   "main": "index.js",
   "directories": {
