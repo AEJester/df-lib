@@ -564,5 +564,14 @@ module.exports = class PlayerAction {
     }
     disableDeathDrops() {
         console.log("Drops disabled.");
+        return this;
+    }
+    gmAdventure() {
+        console.log("Gamemode set to adventure.");
+        return this;
+    }
+    gmSurvival() {
+        console.log("Gamemode set to survival.");
+        return this;
     }
 }
