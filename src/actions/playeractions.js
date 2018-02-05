@@ -259,7 +259,7 @@ module.exports = class PlayerAction {
      * @param {*} opts 
      */
     sendTitle(title, duration, opts={}) {
-        console.log(title)
+        console.log(title);
         (opts.subtitle) ? console.log(opts.subtitle) : console.log("Title sent");
     }
     /**
@@ -463,7 +463,7 @@ module.exports = class PlayerAction {
      * @param {*} location 
      * @param {*} particle_effect 
      */
-    launchProjectile(projectile, text = "", number, location, particle_effect = "") {
+    launchProjectile(projectile, number, location, particle_effect = "", text = "") {
         console.log("Projectile "+projectile+" launched.");
         return this;
     }
@@ -505,5 +505,64 @@ module.exports = class PlayerAction {
     setTime(number) {
         console.log("Time set.");
         return this;
+    }
+    enableFlight() {
+        console.log("Flight enabled.");
+        return this;
+    }
+    disableFlight() {
+        console.log("Flight disabled.");
+        return this;
+    }
+    allowDropItems() {
+        console.log("Drop items allowed.");
+        return this;
+    }
+    keepDeathItems() {
+        console.log("Enabled keep items.");
+        return this;
+    }
+    loseDeathItems() {
+        console.log("Disabled keep items.");
+        return this;
+    }
+    setWeatherClear() {
+        console.log("Weather cleared.");
+        return this;
+    }
+    setWeatherRain() {
+        console.log("Raining.");
+        return this;
+    }
+    enableProjColls() {
+        console.log("Projectile collisions enabled.");
+        return this;
+    }
+    disableProjColls() {
+        console.log("Projectile collisions disabled.");
+        return this;
+    }
+    enableNatRegen() {
+        console.log("Natural regen enabled.");
+        return this;
+    }
+    disableNatRegen() {
+        console.log("Natural regen disabled.");
+        return this;
+    }
+    allowBlockPlaceBreak(block = "") {
+        console.log("Block breaking allowed.");
+        return this;
+    }
+    disallowBlockPlaceBreak() {
+        console.log("Block breaking disallowed.");
+        return this;
+    } 
+    enableDeathDrops() {
+        console.log("Drops enabled.");
+        return this;
+    }
+    disableDeathDrops() {
+        console.log("Drops disabled.");
     }
 }
