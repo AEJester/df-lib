@@ -10,3 +10,5 @@ exports.PlayerEvent = require("./src/blocks/playerevent.js");
 exports.VariableItems = require("./src/variables/variableitems.js");
 
 exports.Plot = require("./src/plot.js");
+
+//main file
