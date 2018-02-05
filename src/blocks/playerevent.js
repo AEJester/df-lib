@@ -1,5 +1,11 @@
 module.exports = class PlayerEvent {
-    constructor() {
+    constructor(event) {
+        this.event = event;
+        for (var i = 0; i < this.events.length; i++) {
+            if (this.event !== this.events[i]) {
+                throw new Error("Event not recognised! Please use a different event.")
+            }
+        }
         this.events = [
             "PlayerJoin",
             "PlayerLeave",
@@ -34,12 +40,5 @@ module.exports = class PlayerEvent {
             "PlayerTakeFallDamage"
         ];
     }
-    isEvent(event) {
-        for (var i = 0; i < this.events.length; i++) {
-            if (event !== this.events[i]) {
-                throw new Error("Event not recognised! Please use a different event.")
-            }
-        }
-        return this;
-    }
+    
 }
