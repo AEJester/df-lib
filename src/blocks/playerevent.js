@@ -34,10 +34,14 @@ module.exports = class PlayerEvent {
             "PlayerTakeFallDamage"
         ];
         this.event = event;
+        this.isEqual = false;
         for (var i = 0; i < this.events.length; i++) {
-            if (this.event !== this.events[i]) {
-                throw new Error("Event not recognised! Please use a different event.")
+            if (this.event == this.events[i]) {
+                this.isEqual = true;
             }
+        }
+        if (this.isEqual !== true) {
+            throw new Error("Event not recognised! Please use a different event.")
         }
     }
     
