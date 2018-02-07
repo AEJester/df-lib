@@ -196,11 +196,11 @@ module.exports = class PlayerAction {
      * @param {*} text 
      * @param {Number} delay 
      */
-    async sendDialogue(text, delay) {
+    sendDialogue(text, delay) {
         if (typeof text == "object") {
             for (var i = 0; i < text.length; i++) {
                 console.log(text[i]);
-                await this.sleep(number);
+                this.sleep(number);
             }
         } else if (typeof text == "string") {
             console.log(text);
@@ -241,11 +241,11 @@ module.exports = class PlayerAction {
      * @param {*} sound_effects 
      * @param {*} delay 
      */
-    async playSequence(sound_effects, delay) {
+    playSequence(sound_effects, delay) {
         if (typeof sound_effects == "object") {
             for (var t = 0; t < sound_effects.length; t++) {
                 console.log("Sound "+ sound_effects[t]+" played.");
-                await this.sleep(delay);
+                this.sleep(delay);
             }
         } else {
             console.log("Sound "+ sound_effects +" played.");
