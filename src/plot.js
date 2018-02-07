@@ -7,4 +7,8 @@ module.exports = class Plot {
         this.plotIcon = icon;
         this.functions = [];
     }
+    onEvent(event, callback) {
+        eval(callback);
+        return this;
+    }
 }
